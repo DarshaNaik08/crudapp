@@ -1,0 +1,44 @@
+<mat-toolbar class="title-toolbar">
+   
+    <span>Add Employee details</span>
+
+</mat-toolbar>
+
+<div>
+    <form [formGroup]="empForm">
+        <mat-card class="card-container">
+
+            <table>
+                <tr>
+                    <mat-form-field class="demo-full-width">
+                        <input matInput placeholder="Employee Name" formControlName="Name" required>
+
+                        <mat-error *ngIf="myError('Name', 'required')"> Name is required</mat-error>
+                        <mat-error *ngIf="myError('Name', 'pattern')"> Please enter valid first name</mat-error>
+
+                    </mat-form-field>
+
+
+                </tr>
+                <tr>
+
+                    <mat-form-field class="demo-full-width">
+                        <input matInput placeholder="Email address" formControlName="email" required>
+                        <mat-error *ngIf="myError('email', 'required')"> Please enter e-mail id</mat-error>
+                        <mat-error *ngIf="myError('email', 'pattern')">Please enter valid e-mail id</mat-error>
+                    </mat-form-field>
+
+
+                </tr>
+
+            </table>
+
+            <div class="btn-sec">
+                <button mat-raised-button type="submit" color="primary" class="Update-btn" (click)="editEmployee()">Save</button>
+                <button mat-raised-button type="button" class="Discard-btn" (click)="cancel()">Cancel</button>
+            </div>
+
+        </mat-card>
+    </form>
+</div>
+

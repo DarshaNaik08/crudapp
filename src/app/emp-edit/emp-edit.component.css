@@ -1,0 +1,39 @@
+span{
+    margin: 0 auto;
+color:#fff;
+}
+
+.title-toolbar{
+    background:#111;
+}
+
+.mat-form-field{
+    /* width: 500px; */
+    width: 400px;
+    margin: 1.5rem auto;
+}
+tr{
+    display:flex;
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Update-btn{
+    margin-right:20px;
+}
+
+@media (max-width: 768px) {
+    .mat-form-field {
+        width: 80%; 
+    }
+}
+
+/* Media query for even smaller screens */
+@media (max-width: 480px) {
+    .mat-form-field {
+        width: 80%; 
+    }
+}
